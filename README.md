@@ -8,4 +8,4 @@ Reads all repos you have *starred* and creates a list of all open pull requests 
 
 Upon re-running script, a new markdown file (new_pull_requests.md) is created with just the open pull requests that are new since you last ran the script.
 
-Eachsubsequent re-run of the script performs the same, but only displays the newest open pull requests since the last run.
+Each subsequent re-run of the script performs the same, but only displays the newest open pull requests since the last run.
