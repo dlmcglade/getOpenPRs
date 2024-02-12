@@ -22,7 +22,7 @@ GetOpenPRs is designed for developers who want to stay updated with the activity
 
 1. Clone this repository to your local machine:
 
-```bash
+```
 git clone https://github.com/dlmcglade/getOpenPRs.git
 cd getOpenPRs
 ```
@@ -31,13 +31,13 @@ cd getOpenPRs
 
 getOpenPRs.py uses GITHUB_TOKEN stored as an environment variable
 
-```bash
+```
 export GITHUB_TOKEN="YOUR_PERSONAL_ACCESS_TOKEN"
 ```
 
 
 3. Running
 
-```bash
+```
 python3 getOpenPRs.py
 ```
