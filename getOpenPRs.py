@@ -1,10 +1,8 @@
 import requests
+import os  # Import the os module
 
-def get_github_token(file_path):
-    with open(file_path, 'r') as file:
-        return file.read().strip()
-
-GITHUB_TOKEN = get_github_token("github_token.txt")
+# Get the GITHUB_TOKEN from environment variables
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
 STARRED_REPOS_URL = "https://api.github.com/user/starred"
 
 def get_pull_requests(repo, state, per_page=100):
