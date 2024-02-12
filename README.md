@@ -1,4 +1,4 @@
-# GitHub Starred Repos Pull Requests Tracker
+# Starred Repos Pull Requests Summary & Tracker
 
 GetOpenPRs is designed for developers who want to stay updated with the activity in the repositories they've starred. It provides an efficient way to track all the open pull requests across your starred repositories and also keeps a record of the last 5 closed pull requests from each repository. This tool is perfect for developers who want to keep an eye on projects they're interested in but might not have the time to check each one regularly.
 
