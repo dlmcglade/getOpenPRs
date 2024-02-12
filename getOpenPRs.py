@@ -41,6 +41,8 @@ def main():
 
     for repo in starred_repos:
         summary_content += f"## {repo}\n\n"
+
+        # Process open pull requests
         open_pulls = get_pull_requests(repo, "open")
         if open_pulls:
             summary_content += "### Open Pull Requests\n"
@@ -52,6 +54,16 @@ def main():
             summary_content += "\n"
         else:
             summary_content += "No open pull requests.\n\n"
+
+        # Process the last 5 closed pull requests
+        closed_pulls = get_pull_requests(repo, "closed", per_page=5)
+        if closed_pulls:
+            summary_content += "### Last 5 Closed Pull Requests\n"
+            for pull in closed_pulls:
+                summary_content += f"- **PR #{pull['number']}**: {pull['title']} (by {pull['user']['login']}) - [Link]({pull['html_url']})\n"
+            summary_content += "\n"
+        else:
+            summary_content += "No recently closed pull requests.\n\n"
 
     # Always update pull_requests_summary.md
     with open("pull_requests_summary.md", "w") as file:
