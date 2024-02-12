@@ -1,43 +1,65 @@
-# Starred Repos Pull Requests Summary & Tracker
+# Open Pull Requests Fetcher for Starred Repositories
 
-GetOpenPRs is designed for developers who want to stay updated with the activity in the repositories they've starred. It provides an efficient way to track all the open pull requests across your starred repositories and also keeps a record of the last 5 closed pull requests from each repository. This tool is perfect for developers who want to keep an eye on projects they're interested in but might not have the time to check each one regularly.
+## Introduction
+This Python script retrieves open pull requests for repositories you have starred on GitHub. It's designed to help developers keep track of contributions and updates in projects they are interested in.
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Configuration](#configuration)
+- [Examples](#examples)
+- [Troubleshooting](#troubleshooting)
+- [Contributors](#contributors)
+- [License](#license)
+
+## Installation
+Ensure Python is installed on your system. If not, you can download it from [python.org](https://python.org).
+
+1. Clone or download this script to your local machine.
+2. Open a terminal and navigate to the script's directory.
+3. Install the required Python packages:
+
+```
+pip install requests
+```
+
+## Usage
+Before running the script, make sure your `GITHUB_TOKEN` environment variable is set, as it's needed to authenticate with the GitHub API and access your starred repositories.
+
+To run the script:
+
+```
+python getOpenPRs.py
+```
+
+This command will fetch and display open pull requests for your starred repositories.
 
 ## Features
+- Retrieves open pull requests from the user's starred GitHub repositories.
+- Uses GitHub API with proper authentication.
+- Easy to use with minimal configuration.
 
-- **Live View of Open Pull Requests**: Fetch and display a live view of all the open pull requests across your starred GitHub repositories in a markdown file.
-- **Historical Data of Closed Pull Requests**: Along with open pull requests, get a snapshot of the last 5 closed pull requests from each starred repository.
-- **Delta Updates on New Pull Requests**: Re-run the script to generate a new markdown file with just the new open pull requests since the last execution, allowing for efficient tracking over time.
-- **Easy Integration**: Simple setup and execution process, making it easy to integrate into your daily or weekly workflow.
-- **Markdown Output**: All data is stored in markdown files (`pull_requests_summary.md` and `new_pull_requests.md`), making it easy to view, share, and store.
+## Dependencies
+- Python 3.x
+- `requests` library
 
-## Getting Started
-
-### Prerequisites
-
-- Python 3.6 or higher
-- `pip` for installing dependencies (if we get around to doing any)
-- A GitHub Personal Access Token with permissions to read your starred repositories
-
-### Installation
-
-1. Clone this repository to your local machine:
+## Configuration
+To use this script, you must have a personal GitHub token set as an environment variable:
 
 ```
-git clone https://github.com/dlmcglade/getOpenPRs.git
-cd getOpenPRs
+export GITHUB_TOKEN='your_github_token_here'
 ```
 
-2. Setup
+This token is necessary for the script to authenticate with GitHub and retrieve information about your starred repositories.
 
-getOpenPRs.py uses GITHUB_TOKEN stored as an environment variable
+## Examples
+To see the script in action, simply run it after setting up your GitHub token. No additional arguments are required.
 
-```
-export GITHUB_TOKEN="YOUR_PERSONAL_ACCESS_TOKEN"
-```
+## Troubleshooting
+- **Missing GITHUB_TOKEN**: Ensure the `GITHUB_TOKEN` environment variable is correctly set as detailed in the [Configuration](#configuration) section.
 
-
-3. Running
-
-```
-python3 getOpenPRs.py
-```
+## License
+This script is provided under the MIT License. See the LICENSE file for more details.
