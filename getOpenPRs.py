@@ -1,7 +1,6 @@
 import requests
-import os  # Import the os module
+import os
 
-# Get the GITHUB_TOKEN from environment variables
 GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
 STARRED_REPOS_URL = "https://api.github.com/user/starred"
 
