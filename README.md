@@ -27,7 +27,16 @@ git clone https://github.com/dlmcglade/getOpenPRs.git
 cd getOpenPRs
 ```
 
-2. Running
+2. Setup
+
+getOpenPRs.py uses GITHUB_TOKEN stored as an environment variable
+
+```bash
+export GITHUB_TOKEN="YOUR_PERSONAL_ACCESS_TOKEN"
+```
+
+
+3. Running
 
 ```bash
 python3 getOpenPRs.py
